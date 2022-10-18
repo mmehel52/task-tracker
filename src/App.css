@@ -1,38 +1,107 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6b2b4a;
+}
+.container {
+  border-radius: 20px;
+  background-color: #035e57;
+
+  display: flex;
+  border: 1px solid grey;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.todoForm {
+  display: flex;
+  justify-content: space-around;
+  width: 450px;
+}
+.input1 {
+  width: 80%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+.input2 {
+  width: 30%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+.btn-addtask {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin: 0 5px;
+  width: 25%;
+  background-color: #f4fad9;
+  font-size: 20px;
+  font-weight: 600;
+}
+.btn-close {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 15px;
+  width: 50%;
+  background-color: #f4fad9;
+  font-size: 20px;
+  font-weight: 600;
+}
+.btn-delete {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin: 0 5px;
+  width: 15%;
+  background-color: #61baa5;
+  font-size: 15px;
+  font-weight: 600;
+}
+.allTodos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.singleTodo {
+  border-radius: 50px;
+  margin: 10px 0;
+  background-image: repeating-linear-gradient(90deg, #f4fad9 0%, #f06b3e);
+  padding: 10px 20px;
+  display: flex;
+  width: 450px;
+  align-items: center;
+}
+
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
+}
+.inlist {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex: 1;
+  color: black;
 }
-
-.App-link {
-  color: #61dafb;
+.inlist-line {
+  text-decoration: line-through black;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  flex: 1;
+  color: black;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todoDate {
+  font-size: 12px;
 }
