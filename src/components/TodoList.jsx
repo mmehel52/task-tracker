@@ -1,15 +1,12 @@
-import React, { useState } from "react";
-
-const TodoList = ({ todos, handleDelete }) => {
-  const [clicked, setClicked] = useState(true);
-
+const TodoList = ({ todos, handleDelete, handleComplete }) => {
   return (
     <ul className="allTodos">
-      {todos.map((t) => (
+      {todos.map((t, index) => (
         <li className="singleTodo">
           <div
-            className={clicked ? "inlist" : "inlist-line"}
-            onClick={() => setClicked(!clicked)}
+            key={index}
+            onClick={() => handleComplete(t.id)}
+            className={t.isComplete ? "inlist-line" : "inlist"}
           >
             <span className="todoText" key={t.id}>
               {t.todo}

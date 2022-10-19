@@ -22,6 +22,16 @@ function App() {
       setDate("");
     }
   };
+  const handleComplete = (id) => {
+    let complete = todos.map((todo) => {
+      if (todo.id === id) {
+        todo.isComplete = !todo.isComplete;
+      }
+      return todo;
+    });
+
+    setTodos([...complete]);
+  };
 
   const handleDelete = (id) => {
     const delTodo = todos.filter((to) => to.id !== id);
@@ -44,7 +54,11 @@ function App() {
               setTodo={setTodo}
               setDate={setDate}
             />
-            <TodoList todos={todos} handleDelete={handleDelete} />
+            <TodoList
+              todos={todos}
+              handleDelete={handleDelete}
+              handleComplete={handleComplete}
+            />
           </div>
         )}
       </div>

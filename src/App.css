@@ -8,11 +8,11 @@
 .container {
   border-radius: 20px;
   background-color: #035e57;
-
   display: flex;
   border: 1px solid grey;
   flex-direction: column;
   align-items: center;
+  justify-items: center;
   padding: 20px;
   font-size: 25px;
   font-weight: 700;
@@ -23,13 +23,13 @@
   width: 450px;
 }
 .input1 {
-  width: 80%;
+  width: 60%;
   padding: 10px;
   border-radius: 20px;
   border: none;
 }
 .input2 {
-  width: 30%;
+  width: 60%;
   padding: 10px;
   border-radius: 20px;
   border: none;
@@ -49,10 +49,11 @@
   border-radius: 10px;
   border: none;
   margin-bottom: 15px;
-  width: 50%;
+  width: 25%;
   background-color: #f4fad9;
   font-size: 20px;
   font-weight: 600;
+  margin-right: 35px;
 }
 .btn-delete {
   padding: 10px;
@@ -72,7 +73,7 @@
 .singleTodo {
   border-radius: 50px;
   margin: 10px 0;
-  background-image: repeating-linear-gradient(90deg, #f4fad9 0%, #f06b3e);
+  background-color: #f06b3e;
   padding: 10px 20px;
   display: flex;
   width: 450px;
@@ -101,6 +102,7 @@ form {
   justify-content: center;
   flex: 1;
   color: black;
+  opacity: 0.3;
 }
 .todoDate {
   font-size: 12px;
